@@ -1,0 +1,16 @@
+<%= form_with(model: place, local: true, html: { onsubmit: "return validateForm();"} ) do |form| %>
+<div class="form">
+    <%= form.hidden_field :place_id %>
+    <%= form.hidden_field :place_name %>
+    <%= form.hidden_field :city %>
+    <%= form.hidden_field :street %>
+    <%= form.hidden_field :street_no %>
+    <%= form.hidden_field :open_hours %>
+</div>
+  <div class="actions" id="actions" style="display: none;">
+    <input type="button" value="No Retry" class="btn btn-secondary" id="retry">
+    
+    <%#= form.submit "Yes",id: "yes" %>
+    <input type="submit" name="commit" class="btn btn-primary" value="Yes" id="yes">
+  </div>
+<% end %>

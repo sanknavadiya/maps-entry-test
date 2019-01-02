@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <label class="navbar-brand" href="#">Search</label>
+  <div class="collapse navbar-collapse"></div>
+    <div class="form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-secondary my-2 my-sm-0" href="<%= places_path %>">Places</a>
+    </div>
+</nav>
+<div class="form-group">
+  <label for="pac-input">Search For A Place</label>
+  <input id="pac-input" type="text" class="form-control">
+</div>
+
+<div class="form-group" id="mapDiv" style="display: none;">
+  <label>Is This Location Correct?</label>
+  <div id="map"></div>
+</div>
+
+<div id="infowindow-content">
+  <img src="" width="16" height="16" id="place-icon">
+  <span id="place-name"  class="title"></span><br>
+  <span id="place-address"></span>
+</div>
+
+<%= render 'form', place: @place %>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVLyPX3oOd7-VK-MNwwg5pHICQmfnA2bs&libraries=places&callback=initMap" async defer></script>
