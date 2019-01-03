@@ -3,11 +3,8 @@ function initMap() {
     center: {lat: -33.8688, lng: 151.2195},
     zoom: 13
   });
-  var card = document.getElementById('pac-card');
-  var input = document.getElementById('pac-input');
-  var types = document.getElementById('type-selector');
-  var strictBounds = document.getElementById('strict-bounds-selector');
 
+  var input = document.getElementById('pac-input');
   var autocomplete = new google.maps.places.Autocomplete(input);
 
   // Bind the map's bounds (viewport) property to the autocomplete object,
@@ -69,6 +66,7 @@ function initMap() {
       $("#place_street_no").val(number);
       $("#place_city").val(city);
       $("#place_open_hours").val(place["opening_hours"]["weekday_text"]);
+      console.log(place["opening_hours"]["weekday_text"])
       map.fitBounds(place.geometry.viewport);
     } else {
       map.setCenter(place.geometry.location);

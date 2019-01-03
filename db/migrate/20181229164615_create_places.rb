@@ -6,7 +6,7 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :street
       t.string :street_no
-      t.string :open_hours, array: true, default: []
+      t.string :open_hours
 
       t.timestamps
     end

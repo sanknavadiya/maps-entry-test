@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_12_29_164615) do
     t.string "city"
     t.string "street"
     t.string "street_no"
-    t.string "open_hours", default: [], array: true
+    t.string "open_hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

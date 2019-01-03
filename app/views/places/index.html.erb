@@ -20,7 +20,7 @@
       </div>
       <div id="collapse<%= place.id %>" class="collapse <%= index==0 ? 'show' : '' %>" data-parent="#accordion">
         <div class="card-body">
-          <% place.open_hours.each do |day| %>
+          <% place.open_hours.split(",").each do |day| %>
             <% f_day = day.split(":",2) %>
             <div class="d-flex justify-content-between">
               <div>
